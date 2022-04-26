@@ -1,73 +1,108 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Bootstrap 4 Multi-Step Form</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'><link rel="stylesheet" href="./style.css">
-<style>
-   /* ::placeholder{
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* ::placeholder{
      color:red;
    } */
-   input{
-     border-radius: 2rem;
-   }
-   form{
-     border-radius: 2rem;
-   }
-</style>
+    input {
+      border-radius: 2rem;
+    }
+
+    form {
+      border-radius: 2rem;
+    }
+    .form_section{
+      margin-top: 100px;
+    }
+  </style>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<h1 class="bg-info text-white text-center p-2 fixed-top">Bootstrap 4 Multi-step form</h1>
-
-<main class="content" role="content">
-	
-	<section id="section1">
-		<div class="container-fluid col-md-6 col-md-offset-3">
-
-<!-- MultiStep Form -->
-<form id="regForm" action="/submit_page.php">
-  <h1 >Sign in:</h1>
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab">Name:
-    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-  </div>
-  <div class="tab">Phone number
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-  </div>
-
-  <div class="tab">Product key :
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-
-  </div>
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <!-- <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> -->
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  <!-- https://www.loom.com/share/2da2da26372a4ef6a302d0d49807ac69 -->
+  <!-- partial:index.partial.html -->
+  <!-- <div class="header_section">
+    <div class="container-fluid">
+      <h1 class="bg-info text-white text-center p-2 fixed-top">Bootstrap 4 Multi-step form</h1>
     </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px; " >
-    <span class="step "></span>
+  </div> -->
+<div class="form_section">
+  <main class="content" role="content">
 
-    <span class="step"></span>
-    <span class="step"></span>
-  </div>
-</form>
-<!-- /.MultiStep Form -->
-	
-		</div>
-	</section>
+    <section id="section1">
+      <!-- <div class="container-fluid col-md-6 col-md-offset-3"> -->
+      <div class="container">
 
-</main> <!-- /content -->
-	
+        <div class="row align-items-center">
+          <div class="col">
+            <h2 class="text-light"> 
+              Sign in to use your favorite productivity office apps & manage your office 365 from any device, anytime,
+              anywhere </h2>
+          </div>
+          <div class="col-auto">
+            <form id="regForm" action="#">
 
-<!-- alerts are for fun of it -->
-<!-- <div class="alerts-container">
+              <!-- One "tab" for each step in the form: -->
+              <div class="tab">
+
+                <h1>Sign in:</h1>
+                <p><input placeholder=" Name" oninput="this.className = ''" name="Name"></p>
+
+                <p><input placeholder=" Email" oninput="this.className = ''" name="email"></p>
+              </div>
+              <div class="tab">
+                <h1>Update your information </h1>
+                <p>Passwords can be forgotten or stolen, just in case, add security info now to help you get back into
+                  your account in case something goes wrong. We won’t use this info to spam you-just to keep your
+                  account more secure.</p>
+                <p>
+                <img src="input.png" alt="" style="position: relative;
+                left: -1rem;">
+                </p>
+
+                <p><input placeholder="Phone" oninput="this.className = ''" name="phone"></p>
+              </div>
+
+              <div class="tab">Product key :
+                <p><input oninput="this.className = ''" name="uname"></p>
+
+              </div>
+              <div style="overflow:auto;">
+                <div class="text-center">
+                  <!-- <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> -->
+                  <button class="btn_styule" type="button" id="nextBtn" onclick="nextPrev(1)">Continue</button>
+                </div>
+              </div>
+              <!-- Circles which indicates the steps of the form: -->
+              <div style="text-align:center;margin-top:40px;  visibility: hidden;">
+                <span class="step "></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- MultiStep Form -->
+        <!-- /.MultiStep Form -->
+
+      </div>
+    </section>
+
+  </main> <!-- /content -->
+</div>
+
+
+  <!-- alerts are for fun of it -->
+  <!-- <div class="alerts-container">
 	
 	<div class="row">
 		<div id="timed-alert" class="alert alert-info animated tada" role="alert">
@@ -81,11 +116,13 @@
 	</div>
 	
 </div> -->
-<!-- partial -->
+  <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>

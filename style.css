@@ -1,11 +1,13 @@
-/*custom font*/
-@import url(import url here);
+
 
 body {
 	/*font: normal 1em 'font';*/
-	background-color: #ecfab6;
+	background-color: #707070;
 }
+.container{
+  max-width: 1380px;
 
+}
 main {
 /*	margin-top: 4.5em; */
 }
@@ -21,22 +23,25 @@ main {
 
 #regForm {
   background-color: #fff;
-  margin: 100px auto;
-  font-family: Raleway;
+  /* margin: 100px auto; */
+  /* font-family: Raleway; */
   padding: 40px;
   width: 100%;
   min-width: 600px;
+  max-width: 600px;
 }
 
 h1 {
-  text-align: center;  
+  text-align: left;  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  /* font-family: Raleway; */
   border: 1px solid #aaaaaa;
 }
 
@@ -51,19 +56,28 @@ input.invalid {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #fa6a12;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 30px;
   font-size: 17px;
   font-family: Raleway;
   cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
-
+button:focus {
+  
+  outline: none;
+}
 button:hover {
   opacity: 0.8;
 }
-
+input:focus-visible {
+  outline: none;
+}
 #prevBtn {
   background-color: #bbbbbb;
 }
