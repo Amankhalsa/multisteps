@@ -1,3 +1,3 @@
 # multisteps
 
-<a  href="https://amankhalsa.github.io/multisteps/"> link</a>
+<a  href="https://amankhalsa.github.io/multisteps/"> multisteps</a>
